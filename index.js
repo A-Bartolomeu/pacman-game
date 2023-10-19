@@ -392,10 +392,10 @@ function circleCollidesWithRectangle({ circle, rectangle }) {
   );
 }
 
-let animationID;
+let animationId;
 
 function animate() {
-  animatiodID = requestAnimationFrame(animate);
+  animationId = requestAnimationFrame(animate);
   c.clearRect(0, 0, canvas.width, canvas.height);
   if (keys.w.pressed && lastKey === "w") {
     for (let i = 0; i < boundaries.length; i++) {
@@ -473,7 +473,7 @@ function animate() {
       if (ghost.scared) {
         ghosts.splice(i, 1);
       } else {
-        cancelAnimationFrame(animationID);
+        cancelAnimationFrame(animationId);
       }
     }
   }
